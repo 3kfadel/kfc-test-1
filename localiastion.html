@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo (1).ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo (1).ico" type="image/x-icon">
+    <title>Localisation KFC</title>
+    <style>
+        /* Styles CSS ici */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Votre en-tête ici -->
+    </header>
+
+    <section class="location-page">
+        <h1>Localisation du KFC</h1>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <!-- Votre pied de page ici -->
+    </footer>
+
+    <script>
+        function initMap() {
+            // Coordonnées du KFC
+            var kfcLocation = {lat: 48.8566, lng: 2.3522};
+
+            // Créer la carte centrée sur les coordonnées du KFC
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: kfcLocation
+            });
+
+            // Ajouter un marqueur pour le KFC
+            var marker = new google.maps.Marker({
+                position: kfcLocation,
+                map: map,
+                title: 'KFC'
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap">
+    </script>
+</body>
+</html>
