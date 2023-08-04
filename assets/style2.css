@@ -13,7 +13,37 @@
     background-image:image-set('images/R.jpg');
     grid-template-columns: repeat(3, 1fr);
 }
-
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.menu_number {
+    display: flex;
+    align-items: center;
+}
+.menu_number .number {
+    margin-left: 90px;
+}
+.menu_2 {
+    display: flex;
+}
+.menu_2 li {
+    margin-left: 25px;
+    list-style: none;
+}
+.menu_2 li a {
+    font-size: 12px;
+    text-decoration: 0;
+    color: #f41e06;
+    text-transform: capitalize;
+}
+.number {
+    background-color: #f41e06;
+    padding: 7px 30px;
+    color: #fff;
+}
 header {
     margin-bottom: 20px;
 }
@@ -45,3 +75,4 @@ header {
     margin-top: 5px;
     color: #555;
 }
+
